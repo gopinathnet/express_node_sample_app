@@ -21,15 +21,15 @@ RUN npm install
 
 COPY . .
 # update each dependency in package.json to the latest version
-RUN npm install -g npm-check-updates \
-    ncu -u \
-    npm install \
-    npm install express \
-    npm install babel-cli \
-    npm install babel-preset \
-    npm install babel-preset-env
+# RUN npm install -g npm-check-updates \
+#     ncu -u \
+#     npm install \
+#     npm install express \
+#     npm install babel-cli \
+#     npm install babel-preset \
+#     npm install babel-preset-env
 # If you are building your code for production
-RUN npm ci --only=production
+#RUN npm ci --only=production
 # Bundle app source
 COPY . /app
 EXPOSE 3000
